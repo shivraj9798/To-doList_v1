@@ -1,0 +1,27 @@
+<%- include("Partials/header"); %>
+
+  <div class="box">
+    <h1 id="heading"><%=listTitle%></h1>
+  </div>
+
+  <div class="box">
+
+
+    <%    for(i=0;i<newlistItem.length;i++){      %>
+    <%if(newlistItem[i]===""){%>
+    <%  continue; %>
+    <%    }   %>
+    <input type="checkbox">
+    <p><%=newlistItem[i]%></p>
+    <hr>
+    <%  } %>
+    <form class="item"action="/" method="post">
+      <input type="text" name="listName" placeholder=" New item" autocomplete="off">
+      <button type="submit" name="list"value="<%=listTitle%>">+</button>
+    </form>
+  </div>
+
+
+
+
+<%- include("Partials/footer") -%>
